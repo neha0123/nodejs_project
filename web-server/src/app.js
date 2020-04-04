@@ -4,6 +4,7 @@ const express = require('express')
  const hbs=require('hbs')
  const geocode=require('./utils/geocode')
  const forecast=require('./utils/forecast')
+ const port=procee.env.PORT||3000
 //app.js
 //app/js/help
 //app.js/about
@@ -121,8 +122,8 @@ app.get('/weather',(req,res)=>{
 })*/
 
 
-app.listen(3000, () => {
-    console.log('server is on 3000 port')
+app.listen(port, () => {
+    console.log('server is on port '+port)
 })
     
 
